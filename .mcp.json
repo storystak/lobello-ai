@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "lobello-vault": {
+      "type": "http",
+      "url": "https://vault.lobello.co/mcp"
+    },
+    "composio": {
+      "type": "http",
+      "url": "https://connect.composio.dev/mcp"
+    }
+  }
+}

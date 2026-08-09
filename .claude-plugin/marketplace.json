@@ -1,0 +1,15 @@
+{
+  "name": "lobello",
+  "owner": { "name": "Storystak", "url": "https://storystak.com" },
+  "metadata": {
+    "description": "LoBello's Claude setup — Vault connector plus marketing skills.",
+    "repository": "https://github.com/storystak/lobello-ai"
+  },
+  "plugins": [
+    {
+      "name": "lobello-ai",
+      "source": "./",
+      "description": "Vault connector plus the skills that use it. One install."
+    }
+  ]
+}
