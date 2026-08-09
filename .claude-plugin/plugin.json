@@ -1,7 +1,7 @@
 {
   "name": "lobello-ai",
   "description": "The LoBello team's Claude setup \u2014 the Vault connector plus the skills that use it. One install gives Claude the agency's brand and every roster client's verified content, kept strictly separate.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": {
     "name": "Storystak",
     "url": "https://storystak.com"
