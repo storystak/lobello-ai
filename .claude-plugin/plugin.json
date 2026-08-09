@@ -1,12 +1,21 @@
 {
   "name": "lobello-ai",
-  "description": "The LoBello team's Claude setup — the Vault connector plus the skills that use it. One install gives Claude the agency's brand and every roster client's verified content, kept strictly separate.",
-  "version": "0.1.0",
-  "author": { "name": "Storystak", "url": "https://storystak.com" },
+  "description": "The LoBello team's Claude setup \u2014 the Vault connector plus the skills that use it. One install gives Claude the agency's brand and every roster client's verified content, kept strictly separate.",
+  "version": "0.1.1",
+  "author": {
+    "name": "Storystak",
+    "url": "https://storystak.com"
+  },
   "homepage": "https://github.com/storystak/lobello-ai",
   "repository": "https://github.com/storystak/lobello-ai",
   "license": "MIT",
-  "keywords": ["lobello", "marketing", "vault", "agency", "cro"],
+  "keywords": [
+    "lobello",
+    "marketing",
+    "vault",
+    "agency",
+    "cro"
+  ],
   "skills": "./skills",
   "mcpServers": "./.mcp.json"
 }

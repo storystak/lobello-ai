@@ -18,7 +18,12 @@ In Claude, go to **Customize → Plugins → Add → Add from a repository**, en
 
 On the plugin's page, open the **Connectors** tab and click **Install** next to **LoBello Vault**. Sign in with your **lobellomarketing.com** Google account — a personal account will be refused.
 
-**Composio** is also listed, for pulling in data sources like analytics. It's optional; skip it while you're getting started.
+Two more are listed, both optional:
+
+- **Asana** — connect it and Claude can see your projects and tasks, so you can ask things like "what's due for [client] this week?" alongside the Vault work.
+- **Composio** — for pulling in data sources like analytics.
+
+Neither is needed to get started. The Vault is the one that matters; add the others when you want them.
 
 **3. Set the Vault to "always allow"**
 
