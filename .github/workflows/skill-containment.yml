@@ -1,0 +1,45 @@
+name: skill-containment
+
+# This repo vendors its skills/ tree from a canonical source that validates
+# before syncing — but nothing stops a direct edit here from shipping content
+# the canonical repo would have blocked. This check closes that path.
+#
+# Two layers, mirroring the canonical validator:
+#   - in-file, case-sensitive: the all-caps INTERNAL marking and doctrine/
+#     paths, which mark internal-only procedure
+#   - a PRIVATE_DENYLIST repo secret carrying name patterns that must not be
+#     published in a public workflow file (without it, that layer is skipped
+#     with a warning, same as the canonical validator)
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  containment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Block internal-marked or private-referencing skill content
+        env:
+          PRIVATE_DENYLIST: ${{ secrets.PRIVATE_DENYLIST }}
+        run: |
+          fail=0
+          if hits=$(grep -rnE '\bINTERNAL\b|\bdoctrine/' skills/ 2>/dev/null); then
+            echo "::error::INTERNAL-marked content or doctrine reference found in skills/"
+            echo "$hits"
+            fail=1
+          fi
+          if [ -n "$PRIVATE_DENYLIST" ]; then
+            if hits=$(grep -rniE "$PRIVATE_DENYLIST" skills/ 2>/dev/null); then
+              echo "::error::private reference found in skills/"
+              echo "$hits"
+              fail=1
+            fi
+          else
+            echo "::warning::PRIVATE_DENYLIST secret not set — private-name checks skipped"
+          fi
+          [ $fail -eq 0 ] && echo "containment ok"
+          exit $fail
