@@ -1,7 +1,7 @@
 {
   "name": "lobello-ai",
-  "description": "The LoBello team's Claude setup \u2014 the Vault connector plus the skills that use it. One install gives Claude the agency's brand and every roster client's verified content, kept strictly separate.",
-  "version": "0.2.0",
+  "description": "The LoBello team's Claude setup — the Stak connector plus the skills that use it. One install gives Claude the agency's brand and every roster client's verified content, kept strictly separate.",
+  "version": "0.3.0",
   "author": {
     "name": "Storystak",
     "url": "https://storystak.com"
@@ -12,7 +12,7 @@
   "keywords": [
     "lobello",
     "marketing",
-    "vault",
+    "stak",
     "agency",
     "cro"
   ],

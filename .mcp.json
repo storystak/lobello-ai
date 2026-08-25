@@ -1,8 +1,8 @@
 {
   "mcpServers": {
-    "lobello-vault": {
+    "lobello-stak": {
       "type": "http",
-      "url": "https://vault.lobello.co/mcp"
+      "url": "https://lobello.storystak.app/mcp"
     },
     "asana": {
       "type": "http",
